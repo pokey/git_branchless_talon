@@ -10,7 +10,7 @@ This is a [Talon](https://talonvoice.com/) voice command set for [git-branchless
 - Mac, Windows, or Linux (currently only tested on Mac)
 - [`git-branchless`](https://github.com/arxanas/git-branchless#installation)
 - [VSCode](https://code.visualstudio.com/)
-- [VSCode extension](https://marketplace.visualstudio.com/items?itemName=pokey.git-branchless)
+- [Unofficial `git-branchless` VSCode extension](https://marketplace.visualstudio.com/items?itemName=pokey.git-branchless)
 
 ### Linux & Mac
 

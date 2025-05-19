@@ -52,6 +52,14 @@ class ClipboardRevset(Branch):
         return actions.clip.text()
 
 
+class RawClipboardRevset(Branch):
+    def get_revset(self):
+        return actions.clip.text()
+
+    def get_branch(self):
+        raise NotImplementedError("RawClipboardRevset does not have a branch method.")
+
+
 class LiteralRevset(Branch):
     def __init__(self, value: str):
         self.value = value
@@ -82,6 +90,8 @@ def create_rich_list_capture(
 revset_marks = {
     "this": SelectedTextRevset(),
     "clip": ClipboardRevset(),
+    "raw clip": RawClipboardRevset(),
+    "clip raw": RawClipboardRevset(),
     "active": LiteralRevset("."),
     "head": LiteralRevset("."),
     "main": LiteralRevset("main()"),

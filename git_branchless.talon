@@ -26,3 +26,6 @@ git (submit | push force) create <user.branchless_revset>:
     user.branchless_submit_revset(branchless_revset, 1)
 git draft <user.branchless_commitish> <user.branchless_destination>:
     user.branchless_reset_mixed(branchless_commitish, branchless_destination)
+git copy message <user.branchless_commitish>:
+    message = user.branchless_get_commit_message(branchless_commitish)
+    clip.set_text(message)

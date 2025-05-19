@@ -254,6 +254,15 @@ class Actions:
             },
         )
 
+    def branchless_get_commit_message(commit: Commitish):
+        """git-branchless automatically create a branch based on commit name for a set of commits."""
+        return actions.user.run_rpc_command_get(
+            "git-branchless.custom.getCommitMessage",
+            {
+                "commit": commit.get_revset(),
+            },
+        )
+
     def branchless_submit_revset(revset: Revset, create: bool = False):
         """git-branchless automatically create a branch based on commit name for a set of commits."""
         actions.user.vscode_with_plugin(
